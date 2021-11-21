@@ -4,7 +4,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:53296",
+      "applicationUrl": "https://fizzbuzzapi.azurewebsites.net",
       "sslPort": 44316
     }
   },
@@ -21,7 +21,7 @@
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "api/FizzBuzzPlay",
-      "applicationUrl": "https://localhost:5001",
+      "applicationUrl": "https://fizzbuzzapi.azurewebsites.net",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
