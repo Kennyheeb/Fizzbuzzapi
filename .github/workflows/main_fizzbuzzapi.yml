@@ -7,8 +7,12 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
-
+  pull_request_target:
+    branches:
+      - main
+env:
+  AZURE_WEBAPP_NAME: fizzbuzzapi
+  
 jobs:
   build:
     runs-on: windows-latest
@@ -52,6 +56,5 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'fizzbuzzapi'
-          slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_34ACC37395034B60B0902184F2AD0BA1 }}
-          package: .
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: './FizzBuzzApi-master'
